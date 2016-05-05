@@ -1,4 +1,4 @@
-package fr.code.kata.romannumeral;
+package fr.code.kata.romannumerals;
 
 import org.apache.log4j.Logger;
 
@@ -7,11 +7,11 @@ import org.apache.log4j.Logger;
  * La conversion se fait en se basant sur la correspondance définie dans l'enum RomunNumeralEnum
  * Un nombre romain doit être compris entre 0 et 3999
  */
-public class RomanNumeral {
+public class RomanNumerals {
 
     public static final int ROMANNUMERAL_MAX = 3999;
     public static final int ROMANNUMERAL_MIN = 0;
-    private final static Logger logger = Logger.getLogger(RomanNumeral.class);
+    private final static Logger logger = Logger.getLogger(RomanNumerals.class);
 
     /**
      * Convertir un arabic number à en un chiffre romain

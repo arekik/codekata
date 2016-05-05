@@ -1,4 +1,4 @@
-package fr.code.kata.romannumeral;
+package fr.code.kata.romannumerals;
 
 /**
  * La valeur de chaque lettre dans un chiffre romain.

@@ -1,4 +1,4 @@
-package fr.code.kata.romannumeral;
+package fr.code.kata.romannumerals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,64 +9,64 @@ import static junit.framework.TestCase.assertEquals;
  * Created by ayr on 04/05/2016.
  */
 
-public class RomanNumeralTest {
+public class RomanNumeralsTest {
 
-    private RomanNumeral romanNumeral;
+    private RomanNumerals romanNumerals;
 
     @Before
     public void init() {
-        romanNumeral = new RomanNumeral();
+        romanNumerals = new RomanNumerals();
     }
 
     @Test(expected = NumberFormatException.class)
     public void testConvertToRoaminMin() {
-        romanNumeral.convertArabicNumberToRoaminNumber(0);
+        romanNumerals.convertArabicNumberToRoaminNumber(0);
     }
 
     @Test(expected = NumberFormatException.class)
     public void testConvertToRoaminMax() {
-        romanNumeral.convertArabicNumberToRoaminNumber(4000);
+        romanNumerals.convertArabicNumberToRoaminNumber(4000);
     }
 
     @Test
     public void testConvertToRoaminI() {
-        assertEquals(romanNumeral.convertArabicNumberToRoaminNumber(1), "I");
+        assertEquals(romanNumerals.convertArabicNumberToRoaminNumber(1), "I");
     }
 
     @Test
     public void testConvertToRoaminMMDCCLI() {
-        assertEquals(romanNumeral.convertArabicNumberToRoaminNumber(2751), "MMDCCLI");
+        assertEquals(romanNumerals.convertArabicNumberToRoaminNumber(2751), "MMDCCLI");
     }
 
 
     @Test(expected = NumberFormatException.class)
     public void testValidateRomainStringEmpty() {
-        romanNumeral.convertRomainNumberToArabicNumber("");
+        romanNumerals.convertRomainNumberToArabicNumber("");
     }
 
     @Test(expected = NumberFormatException.class)
     public void testValidateRomainStringNull() {
-        romanNumeral.convertRomainNumberToArabicNumber(null);
+        romanNumerals.convertRomainNumberToArabicNumber(null);
     }
 
     @Test(expected = NumberFormatException.class)
     public void testValidateRomainStringNotValid() {
-        romanNumeral.convertRomainNumberToArabicNumber("MMDaCC");
+        romanNumerals.convertRomainNumberToArabicNumber("MMDaCC");
     }
 
     @Test
     public void testValidateRomainStringValiderMinscule() {
-        assertEquals(romanNumeral.convertRomainNumberToArabicNumber("mmdccli"), 2751);
+        assertEquals(romanNumerals.convertRomainNumberToArabicNumber("mmdccli"), 2751);
     }
 
     @Test
     public void testValidateRomainStringValiderMajiscule() {
-        assertEquals(romanNumeral.convertRomainNumberToArabicNumber("MMDCCLI"), 2751);
+        assertEquals(romanNumerals.convertRomainNumberToArabicNumber("MMDCCLI"), 2751);
     }
 
     @Test
     public void testValidateRomainStringValider() {
-        assertEquals(romanNumeral.convertRomainNumberToArabicNumber("CCCLXIX"), 369);
+        assertEquals(romanNumerals.convertRomainNumberToArabicNumber("CCCLXIX"), 369);
     }
 
 }
